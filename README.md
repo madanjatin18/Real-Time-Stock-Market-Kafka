@@ -21,8 +21,8 @@ Amazon Web Services (AWS)
 ## Installation Steps:
 - Download Kafka and Java:
 ```bash
-wget https://downloads.apache.org/kafka/3.3.1/kafka_2.12-3.3.1.tgz
-tar -xvf kafka_2.12-3.3.1.tgz
+wget https://downloads.apache.org/kafka/3.6.1/kafka_2.13-3.6.1.tgz
+tar -xvf kafka_2.13-3.6.1.tgz
 
 # Install Java
 wget http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/OpenJDK-1.8.0.141-x86_64-bin.tar.xz
@@ -39,6 +39,37 @@ echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
 echo $JAVA_HOME
 
 java -version
+
+# To set the JAVA_HOME environment variable permanently on your Linux machine and add it to the PATH variable, you can follow these steps:
+
+Determine the Java installation directory:
+
+It seems like you have the OpenJDK directory OpenJDK-1.8.0.141-x86_64-bin. You'll need the path to this directory to set the JAVA_HOME variable.
+Edit the .bashrc file:
+
+Open the .bashrc file located in your home directory using a text editor like nano or vim:
+
+nano ~/.bashrc
+
+Add the following lines at the end of the file to set the JAVA_HOME environment variable:
+export JAVA_HOME=/path/to/your/java/directory/OpenJDK-1.8.0.141-x86_64-bin
+export PATH=$PATH:$JAVA_HOME/bin
+
+Replace /path/to/your/java/directory with the actual path to your Java installation directory.
+Save the file and exit the text editor.
+
+Source the .bashrc file to apply the changes to the current shell session:
+source ~/.bashrc
+
+Verify that the JAVA_HOME environment variable is set correctly:
+echo $JAVA_HOME
+This should display the path to your Java installation directory.
+
+Verify that Java is correctly added to the PATH variable:
+java -version
+This command should display the version of Java installed on your system without any errors.
+
+
 ```
 - Start Zookeeper:
 ``` bash 
