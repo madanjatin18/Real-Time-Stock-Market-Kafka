@@ -44,7 +44,8 @@ java -version
 
 Determine the Java installation directory:
 
-It seems like you have the OpenJDK directory OpenJDK-1.8.0.141-x86_64-bin. You'll need the path to this directory to set the JAVA_HOME variable.
+It seems like you have the OpenJDK directory OpenJDK-1.8.0.141-x86_64-bin.
+You'll need the path to this directory to set the JAVA_HOME variable.
 Edit the .bashrc file:
 
 Open the .bashrc file located in your home directory using a text editor like nano or vim:
